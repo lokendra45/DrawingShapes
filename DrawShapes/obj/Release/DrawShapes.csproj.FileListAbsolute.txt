@@ -8,3 +8,4 @@ C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release
 C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.csproj.CoreCompileInputs.cache
 C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.exe
 C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.pdb
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\bin\Release\DrawShapes.xml

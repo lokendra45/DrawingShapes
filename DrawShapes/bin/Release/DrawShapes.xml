@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DrawShapes</name>
+    </assembly>
+    <members>
+        <member name="M:DrawShapes.AbstractShape.getShape(System.String)">
+            <summary>
+            Getter mehtod for ShapeType.
+            </summary>
+            <param name="shapeType"></param>
+            <returns>returns string shapeTpye</returns>
+        </member>
+        <member name="M:DrawShapes.Circle.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Consturctor made for class Circle
+            </summary>
+            <param name="x">X cordintaes</param>
+            <param name="y">Y cordinates</param>
+            <param name="radius">Radius</param>
+            
+        </member>
+        <member name="M:DrawShapes.Circle.#ctor">
+            <summary>
+            Default Constructor for circle
+            </summary>
+        </member>
+        <member name="M:DrawShapes.Circle.#ctor(System.Int32)">
+            <summary>
+            Consturctor made for class Circle
+            </summary>
+            <param name="radius">circle radius</param>
+        </member>
+        <member name="M:DrawShapes.Circle.#ctor(System.Int32,System.Int32)">
+            <summary>
+             Takes parameter for circle X and Y with base class which is Shape
+            </summary>
+            <param name="x">X parameter</param>
+            <param name="y">Yparamater</param>
+        </member>
+        <member name="M:DrawShapes.Circle.Drawpaint(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            Paint method called from Shape Class(Paint is the method on Shape Class)
+            </summary>
+            <param name="g">graphic libraryr</param>
+            <param name="c">color</param>
+            <param name="thickness"></param>
+            
+        </member>
+        <member name="M:DrawShapes.Circle.DrawFill(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            Fill method called from Shape Class(Fill is the method on Shape Class)
+            </summary>
+            <param name="g">graphic library</param>
+            <param name="c">color</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DrawShapes.Circle.setRadius(System.Int32)" -->
+        <!-- Badly formed XML comment ignored for member "M:DrawShapes.Circle.getRadius" -->
+        <member name="F:DrawShapes.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DrawShapes.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DrawShapes.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DrawShapes.HandleGetShapes.isCircle(System.String)">
+            <summary>
+            Method to check if the input is circle
+            </summary>
+            <param name="shape">Shape as paremeter</param>
+            <returns></returns>
+        </member>
+        <member name="M:DrawShapes.HandleGetShapes.isRectangle(System.String)">
+            <summary>
+            Method to check if the input is Rectangle
+            </summary>
+            <param name="shape">Shape as paremeter</param>
+            <returns></returns>
+        </member>
+        <member name="M:DrawShapes.GetShapesFactory.getShape(System.String)">
+            <summary>
+            Getter which takes shape type as a String
+            </summary>
+            <param name="shapeType">ShapeType as paremeter</param>
+            <returns></returns>
+        </member>
+        <member name="M:DrawShapes.HandleShapeFactory.isShape(System.String)">
+            <summary>
+            bool method to chake weahter the type is shape
+            </summary>
+            <param name="type">takes type as string</param>
+            <returns>if not then null</returns>
+        </member>
+        <member name="P:DrawShapes.HandleVirables.variable">
+            <summary>
+            Get Set method for variable
+            </summary>
+        </member>
+        <member name="P:DrawShapes.HandleVirables.value">
+            <summary>
+            Get Set method for value
+            </summary>
+        </member>
+        <member name="M:DrawShapes.HandleVirables.setVariable(System.String)">
+            <summary>
+            Setter for variable
+            </summary>
+            <param name="variable">Variables as paremeter</param>
+        </member>
+        <member name="M:DrawShapes.HandleVirables.getVariable">
+            <summary>
+            Getter for variables
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DrawShapes.HandleVirables.setValue(System.Single)">
+            <summary>
+            Setter for value
+            </summary>
+            <param name="value">Value as paremeter</param>
+        </member>
+        <member name="M:DrawShapes.HandleVirables.getValue">
+            <summary>
+            Getter for variable
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DrawShapes.PolygonShape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:DrawShapes.PolygonShape.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Parameterized Constructor Created
+            </summary>
+            <param name="x">X</param>
+            <param name="y">Y</param>
+        </member>
+        <member name="M:DrawShapes.PolygonShape.#ctor(System.Drawing.PointF[])">
+            <summary>
+            Constructor that takes points to create polygon
+            </summary>
+            <param name="points">points</param>
+        </member>
+        <member name="M:DrawShapes.PolygonShape.setPoints(System.Drawing.PointF[])">
+            <summary>
+            Setter method for points
+            </summary>
+            <param name="points">points</param>
+        </member>
+        <member name="M:DrawShapes.PolygonShape.getPoint">
+            <summary>
+            Getter method for points
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DrawShapes.PolygonShape.DrawFill(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            Fill method called from Shape Class(Fill is the method on Shape Class)
+            </summary>
+            <param name="g">Graphic</param>
+            <param name="c">Color</param>
+        </member>
+        <member name="M:DrawShapes.PolygonShape.Drawpaint(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            Paint method called from Shape Class(Paint is the method on Shape Class)
+            </summary>
+            <param name="g">Graphic</param>
+            <param name="c">Color</param>
+            <param name="thickness">takes Thickness for pen</param>
+        </member>
+        <member name="M:DrawShapes.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="M:DrawShapes.RectangleShape.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Parameterized constructor declared
+            </summary>
+            <param name="x">X as paremeter</param>
+            <param name="y">Y as paremeter</param>
+            <param name="height">Height as paremeter</param>
+            <param name="width">Width as paremeter</param>
+        </member>
+        <member name="M:DrawShapes.RectangleShape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:DrawShapes.RectangleShape.Drawpaint(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            Paint method called from Shape Class(Paint is the method on Shape Class) 
+            </summary>
+            <param name="g">Graphic</param>
+            <param name="c">Color</param>
+            <param name="thickness">Pen</param>
+        </member>
+        <member name="M:DrawShapes.RectangleShape.DrawFill(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            Fill method called from Shape Class(Fill is the method on Shape Class)
+            </summary>
+            <param name="g">Graphic</param>
+            <param name="c">Color</param>
+        </member>
+        <member name="M:DrawShapes.RectangleShape.setHeight(System.Int32)">
+            <summary>
+            Setter for Height
+            </summary>
+            <param name="height">Height</param>
+        </member>
+        <member name="M:DrawShapes.RectangleShape.getHeight">
+            <summary>
+            Getter method for height
+            </summary>
+            <returns>Returns Height</returns>
+        </member>
+        <member name="M:DrawShapes.RectangleShape.setWidth(System.Int32)">
+            <summary>
+            Setter method for Width
+            </summary>
+            <param name="width">Wodth</param>
+        </member>
+        <member name="M:DrawShapes.RectangleShape.getWidth">
+            <summary>
+            get method for width
+            </summary>
+            <returns>Returns Height</returns>
+        </member>
+        <member name="M:DrawShapes.Shape.getX">
+            <summary>
+            Getter for X
+            </summary>
+            <returns>Returns itself X</returns>
+        </member>
+        <member name="M:DrawShapes.Shape.setY(System.Int32)">
+            <summary>
+            Setter method for Y
+            </summary>
+            <param name="y">Y as paremeter</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DrawShapes.Shape.getY" -->
+        <member name="M:DrawShapes.ShapeFactory.getFactory(System.String)">
+            <summary>
+            Factory class for different color and shape
+            </summary>
+            <param name="choice">this is for shape</param>
+            <returns>returns shapeFactory if true else returns null</returns>
+        </member>
+        <member name="M:DrawShapes.TriangleShape.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:DrawShapes.TriangleShape.#ctor(System.Drawing.PointF[])">
+            <summary>
+            Parameterized constructor
+            </summary>
+            <param name="points">Points as paremeter</param>
+        </member>
+        <member name="M:DrawShapes.TriangleShape.#ctor(System.Int32,System.Int32)">
+             <summary>
+            Pparemeterized constructor which is extending base class which is Shape
+             </summary>
+             <param name="x">takes x as paremeter</param>
+             <param name="y">takes y as paremeter</param>
+        </member>
+        <member name="M:DrawShapes.TriangleShape.setPoints(System.Drawing.PointF[])">
+            <summary>
+            Setter for points
+            </summary>
+            <param name="points">Points as paremeter</param>
+        </member>
+        <member name="M:DrawShapes.TriangleShape.getPoint">
+            <summary>
+            Getter method for Points
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DrawShapes.TriangleShape.DrawFill(System.Drawing.Graphics,System.Drawing.Color)">
+            <summary>
+            Fill method called from Shape Class(Fill is the method on Shape Class)
+            </summary>
+            <param name="g">Graphic</param>
+            <param name="c">Color</param>
+        </member>
+        <member name="M:DrawShapes.TriangleShape.Drawpaint(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            Paint method called from Shape Class(Paint is the method on Shape Class)
+            </summary>
+            <param name="g">Graphic</param>
+            <param name="c">Color</param>
+            <param name="thickness">Thickness as pen</param>
+        </member>
+        <member name="T:DrawShapes.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DrawShapes.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DrawShapes.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
