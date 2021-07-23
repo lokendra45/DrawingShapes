@@ -1,0 +1,10 @@
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\bin\Release\DrawShapes.exe.config
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\bin\Release\DrawShapes.exe
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\bin\Release\DrawShapes.pdb
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.csprojAssemblyReference.cache
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.Form1.resources
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.Properties.Resources.resources
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.csproj.GenerateResource.cache
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.csproj.CoreCompileInputs.cache
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.exe
+C:\Users\Lokendra Bohara\Documents\AES_Project\DrawShapes\DrawShapes\obj\Release\DrawShapes.pdb
