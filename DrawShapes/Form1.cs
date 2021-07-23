@@ -19,7 +19,7 @@ namespace DrawShapes
         RectangleShape rectangle;
         HandleVirables variable;
         PolygonShape polygon;
-        TriangleShape Triangle;
+        TriangleShape triangle;
         
         Color c;
         
@@ -73,13 +73,15 @@ namespace DrawShapes
         {
 
             circle = new Circle(); 
-            rectangle = new RectangleShape(); 
+            rectangle = new RectangleShape();
+            polygon = new PolygonShape();
+            triangle = new TriangleShape();
             circleList = new List<Circle>(); 
             rectList = new List<RectangleShape>(); 
             varList = new List<HandleVirables>();
             triangleList = new List<TriangleShape>();
             polyList = new List<PolygonShape>();
-            c = Color.Red;
+            c = Color.Green;
         }
 
         private void commandtextBox_TextChanged(object sender, EventArgs e)
@@ -94,7 +96,7 @@ namespace DrawShapes
             switch (runCmd)
             {
 
-                case "clear"://if action command is clear
+                case "clear":
                     circleList.Clear();
                     rectList.Clear();
                     varList.Clear();
@@ -105,13 +107,13 @@ namespace DrawShapes
                     drawPolgon = false;
                     inputTextBox.Clear();
                     commandtextBox.Clear();
-                    pictureBox1.Refresh();
+                    Output_Box.Refresh();
                     break;
                 case "run":
                     //checks if command code is empty when clicked action button
                     if (inputTextBox.Text == "")
                     {
-                        MessageBox.Show("No Syntax and Paramater Detected");
+                        MessageBox.Show("Empty Value");
                     }
                     try
                     {
@@ -237,7 +239,7 @@ namespace DrawShapes
                                     //puts points value to Triangle setter method
                                     Triangle.setPoints(points);
                                     triangleList.Add(Triangle);
-                                    //makes draw Triangle true
+                                   
                                     drawTriangle = true;
                                 }
                                 //checks for 'circle' word
@@ -277,7 +279,7 @@ namespace DrawShapes
                                 if (letters[1].Equals("polygon"))
                                 {
                                     //drawd poly instace of Polygon class
-                                    PolygonShape polygon = new PolygonShape();
+                                    PolygonShape poly = new PolygonShape();
                                     //stores the points in array PointF
                                     PointF[] points = {
                                         new PointF(50.0F, 50.0F),
@@ -289,14 +291,14 @@ namespace DrawShapes
                                         new PointF(150.0F, 150.0F)
                                     };
                                     //adds the value of points in the Polygon setter method
-                                    polygon.setPoints(points);
-                                    polyList.Add(polygon);
+                                    poly.setPoints(points);
+                                    polyList.Add(poly);
                                     drawPolgon = true;
                                 }
                             }
 
                             //checks if the word holds the value 'if' then   
-                            if (letters[0] == "if") //code for if statement
+                            if (letters[0] == "if") 
                             {
                                 //decleared the variable_nanme as string and stored the value of 'word[1]'
                                 string variable_name = letters[1];
@@ -306,7 +308,7 @@ namespace DrawShapes
                                     && varList.Exists(x => x.value == Convert.ToInt32(letters[3])) == true)
                                 //checks if condition defined in if condition matches with variable objects list
                                 {
-                                    Console.WriteLine("Entered into if statement");
+                                   
                                 }
                                 else
                                 {//directed to end if line
@@ -384,16 +386,94 @@ namespace DrawShapes
                         Console.WriteLine("Enter the correct parameter" + " " + ex);
                     }
                     //refresh everytime drawing equals to true
-                    pictureBox1.Refresh();
+                    Output_Box.Refresh();
                     break;
                 default://if acction text area is empty
                     MessageBox.Show("The action command is empty\n" +
                         "Or\n" +
-                        "Must be: 'Run' for Execuit the app\n" +
+                        "Must be: 'run' for Execuit the app\n" +
                         "Must be: 'Clear' for Fresh Start");
                     break;
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Output_Box_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            if (fill == false)
+            {
+                if (drawTriangle == true)
+                {
+                    foreach (TriangleShape TriangleObject in triangleList)
+                    {
+                        TriangleObject.Drawpaint(g, c, thickness);
+                    }
+                }
+
+                if (drawCircle == true)
+                {
+                    foreach (Circle circleObject in circleList)
+                    {
+                        circleObject.Drawpaint(g, c, thickness); // draws the circle 
+                    }
+                }
+
+                if (drawRect == true) 
+                {
+                    foreach (RectangleShape rectangleObject in rectList)
+                    {
+                        rectangleObject.Drawpaint(g, c, thickness); //draw the rectangle
+                    }
+                }
+
+                if (drawPolgon == true)
+                {
+                    foreach (PolygonShape polygonObject in polyList)
+                    {
+                        polygonObject.Drawpaint(g, c, thickness); //draw the polygon
+                    }
+                }
+            }
+            if (fill == true)
+            {
+                if (drawTriangle == true)
+                {
+                    foreach (TriangleShape TriangleObject in triangleList)
+                    {
+                        TriangleObject.DrawFill(g, c);
+                    }
+                }
+
+                if (drawCircle == true)
+                {
+                    foreach (Circle circleObject in circleList)
+                    {
+                        circleObject.DrawFill(g, c);
+                    }
+                }
+
+                if (drawRect == true)
+                {
+                    foreach (RectangleShape rectangleObject in rectList)
+                    {
+                        rectangleObject.DrawFill(g, c);
+                    }
+                }
+
+                if (drawPolgon == true)
+                {
+                    foreach (PolygonShape polygonObject in polyList)
+                    {
+                        polygonObject.DrawFill(g, c);
+                    }
+                }
+            }
+            }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -413,7 +493,7 @@ namespace DrawShapes
         public Form1()
         {
             InitializeComponent();
-            AbstractShape shapeFactory = ShapeFactory.getFactory("shape");
+            AbstractShape shapeFactory = ShapeFactory.getFactory("Shape");
             circleShape = shapeFactory.getShape("Circle");
              recShape = shapeFactory.getShape("Rectangle");
             polyShape = shapeFactory.getShape("Polygon");
@@ -434,11 +514,7 @@ namespace DrawShapes
         {
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
